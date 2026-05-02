@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-sans: var(--font-urbanist), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 
-  /* Dark theme palette */
-  --color-background: #0a0b14;
-  --color-surface: #0f1120;
-  --color-card: #131628;
-  --color-card-hover: #1a1f36;
-  --color-border: #1e2444;
+  /* ── Dark premium palette ── */
+  --color-background: #050d1a;
+  --color-surface: #081525;
+  --color-card: #0b1a2e;
+  --color-card-hover: #0f2038;
+  --color-border: #162c48;
 
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-accent: #6366f1;
+  --color-primary: #22d3ee;        /* electric cyan */
+  --color-primary-hover: #06b6d4;
+  --color-accent: #818cf8;         /* soft indigo */
 
-  --color-muted: #94a3b8;
+  --color-muted: #64748b;
+  --color-muted-light: #94a3b8;
   --color-foreground: #f1f5f9;
+  --color-foreground-dim: #cbd5e1;
 }
 
 html {
@@ -27,3 +29,35 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
 }
+
+/* ── Custom animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(14px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.65; transform: scale(1.06); }
+}
+
+@keyframes grid-move {
+  from { background-position: 0 0; }
+  to   { background-position: 40px 40px; }
+}
+
+.animate-float         { animation: float 5s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 6s ease-in-out infinite; }
+.animate-spin-slow     { animation: spin-slow 24s linear infinite; }
+.animate-pulse-glow    { animation: pulse-glow 3.5s ease-in-out infinite; }
+.animate-grid          { animation: grid-move 8s linear infinite; }

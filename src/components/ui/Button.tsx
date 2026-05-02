@@ -14,13 +14,14 @@ interface ButtonProps {
 }
 
 const base =
-  "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer";
+  "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background cursor-pointer select-none";
 
 const variants = {
-  primary: "bg-primary hover:bg-primary-hover text-white",
+  primary:
+    "bg-primary text-background hover:bg-primary-hover shadow-lg shadow-primary/20 hover:shadow-primary/35 hover:-translate-y-0.5 active:translate-y-0 active:shadow-primary/20",
   outline:
-    "border border-border hover:border-primary/60 text-foreground hover:text-primary",
-  ghost: "text-muted hover:text-foreground",
+    "border border-border hover:border-primary/50 text-foreground hover:text-primary bg-transparent hover:-translate-y-0.5 active:translate-y-0",
+  ghost: "text-muted-light hover:text-foreground bg-transparent",
 };
 
 const sizes = {

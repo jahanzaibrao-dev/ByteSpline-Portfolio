@@ -4,157 +4,177 @@ import { Mail, MessageSquare, MapPin, Send } from "lucide-react";
 import { siteContent } from "@/content/site";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/ui/Button";
+import { FadeUp } from "@/components/ui/FadeUp";
+
+const inputClass =
+  "w-full px-4 py-3 rounded-xl border border-border bg-card text-foreground placeholder:text-muted/50 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all text-sm";
+
+const labelClass = "block text-sm font-medium text-muted-light mb-1.5";
 
 export default function Contact() {
   const { contact } = siteContent;
 
+  /**
+   * TODO: Wire up form submission
+   * Options:
+   *   A. Server Action — create `app/actions/contact.ts`, add `action={submitContact}`
+   *   B. API Route    — POST to `/api/contact` using fetch inside onSubmit
+   *   C. Third-party  — Resend, EmailJS, Formspree, etc.
+   */
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    // Replace with real submission logic
+    alert(
+      "Message sent! (placeholder — connect a backend to send real emails)",
+    );
+  }
+
   return (
     <section
       id="contact"
-      className="py-24 px-4"
+      className="py-24 bg-surface/50"
       aria-labelledby="contact-heading"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge={contact.sectionHeader.badge}
           title={contact.sectionHeader.title}
           description={contact.sectionHeader.description}
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Contact info */}
-          <div className="space-y-4">
+          <FadeUp delay={0.1} className="lg:col-span-2 space-y-4">
             <a
               href={`mailto:${contact.email}`}
-              className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-all group"
+              className="flex items-center gap-4 p-5 rounded-2xl border border-border bg-card hover:border-primary/35 transition-all group"
             >
-              <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                <Mail className="text-primary" size={20} aria-hidden="true" />
+              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/18 transition-colors">
+                <Mail className="text-primary" size={18} aria-hidden="true" />
               </div>
               <div>
-                <div className="text-xs text-muted mb-0.5">Email us</div>
-                <div className="text-foreground font-medium text-sm">
+                <p className="text-xs text-muted mb-0.5">Email us</p>
+                <p className="text-foreground font-semibold text-sm">
                   {contact.email}
-                </div>
+                </p>
               </div>
             </a>
 
-            <a
-              href={`https://wa.me/${contact.whatsapp.replace(/\D/g, "")}`}
-              className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-all group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                <MessageSquare
-                  className="text-primary"
-                  size={20}
-                  aria-hidden="true"
-                />
+            <div className="flex items-center gap-4 p-5 rounded-2xl border border-border bg-card">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                <MapPin className="text-primary" size={18} aria-hidden="true" />
               </div>
               <div>
-                <div className="text-xs text-muted mb-0.5">WhatsApp</div>
-                <div className="text-foreground font-medium text-sm">
-                  {contact.whatsapp}
-                </div>
-              </div>
-            </a>
-
-            <div className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card">
-              <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                <MapPin className="text-primary" size={20} aria-hidden="true" />
-              </div>
-              <div>
-                <div className="text-xs text-muted mb-0.5">Location</div>
-                <div className="text-foreground font-medium text-sm">
+                <p className="text-xs text-muted mb-0.5">Location</p>
+                <p className="text-foreground font-semibold text-sm">
                   {contact.location}
-                </div>
+                </p>
               </div>
             </div>
-          </div>
+          </FadeUp>
 
           {/* Contact form */}
-          <form
-            className="space-y-4"
-            onSubmit={(e) => e.preventDefault()}
-            aria-label="Contact form"
-            noValidate
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <FadeUp delay={0.2} className="lg:col-span-3">
+            <form
+              onSubmit={handleSubmit}
+              aria-label="Contact form"
+              noValidate
+              className="space-y-4"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className={labelClass}>
+                    Your Name <span className="text-primary">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    autoComplete="name"
+                    placeholder="John Smith"
+                    className={inputClass}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className={labelClass}>
+                    Email Address <span className="text-primary">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    placeholder="john@company.com"
+                    className={inputClass}
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="project-type" className={labelClass}>
+                    Project Type
+                  </label>
+                  <select
+                    id="project-type"
+                    name="projectType"
+                    className={inputClass}
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Select type...
+                    </option>
+                    {contact.projectTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="budget" className={labelClass}>
+                    Budget Range
+                  </label>
+                  <select
+                    id="budget"
+                    name="budget"
+                    className={inputClass}
+                    defaultValue=""
+                  >
+                    <option value="" disabled>
+                      Select range...
+                    </option>
+                    {contact.budgetRanges.map((range) => (
+                      <option key={range} value={range}>
+                        {range}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm text-muted mb-1.5"
-                >
-                  {contact.formLabels.name}
+                <label htmlFor="message" className={labelClass}>
+                  Message <span className="text-primary">*</span>
                 </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
                   required
-                  autoComplete="name"
-                  placeholder="John Doe"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm"
+                  placeholder="Tell us about your project, goals, or questions..."
+                  className={`${inputClass} resize-none`}
                 />
               </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm text-muted mb-1.5"
-                >
-                  {contact.formLabels.email}
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  placeholder="john@company.com"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm"
-                />
-              </div>
-            </div>
 
-            <div>
-              <label
-                htmlFor="subject"
-                className="block text-sm text-muted mb-1.5"
-              >
-                {contact.formLabels.subject}
-              </label>
-              <input
-                id="subject"
-                name="subject"
-                type="text"
-                placeholder="Website / Web App / SaaS"
-                className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm text-muted mb-1.5"
-              >
-                {contact.formLabels.message}
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                required
-                placeholder="Tell us about your project..."
-                className="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder:text-muted/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm resize-none"
-              />
-            </div>
-
-            <Button type="submit" size="lg" className="w-full">
-              {contact.formLabels.submit}
-              <Send size={16} aria-hidden="true" />
-            </Button>
-          </form>
+              <Button type="submit" size="lg" className="w-full">
+                Send Message
+                <Send size={15} aria-hidden="true" />
+              </Button>
+            </form>
+          </FadeUp>
         </div>
       </div>
     </section>

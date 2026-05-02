@@ -2,24 +2,26 @@ export const siteContent = {
   meta: {
     title: "ByteSpline Tech — Modern Web, Apps & AI Solutions",
     description:
-      "ByteSpline Tech helps businesses build professional websites, web apps, SaaS platforms, and animated digital experiences.",
+      "ByteSpline Tech is a modern software studio building polished websites, web apps, SaaS platforms, and animated digital experiences for startups and businesses worldwide.",
     url: "https://bytespline.com",
     keywords: [
       "web development",
-      "SaaS",
-      "web apps",
-      "mobile apps",
+      "SaaS development",
+      "web app development",
+      "UI/UX design",
+      "3D websites",
       "AI integration",
-      "Next.js",
-      "Pakistan",
+      "Next.js agency",
+      "software studio",
     ],
   },
 
   nav: {
-    logo: "ByteSpline",
+    logo: "ByteSpline Tech",
     links: [
+      { label: "Home", href: "#home" },
       { label: "Services", href: "#services" },
-      { label: "Portfolio", href: "#portfolio" },
+      { label: "Work", href: "#work" },
       { label: "Process", href: "#process" },
       { label: "About", href: "#about" },
       { label: "Contact", href: "#contact" },
@@ -29,15 +31,13 @@ export const siteContent = {
 
   hero: {
     badge: "Modern Web, Apps & AI Solutions",
-    title: {
-      start: "We build digital products that ",
-      highlight: "look sharp, move smoothly,",
-      end: " and perform fast.",
-    },
+    titleLine1: "We build digital products that",
+    titleHighlight: "look sharp, move smoothly,",
+    titleLine2: "and perform fast.",
     description:
-      "ByteSpline Tech helps businesses build professional websites, web apps, SaaS platforms, and animated digital experiences.",
-    primaryButton: { label: "Start a Project", href: "#contact" },
-    secondaryButton: { label: "View Services", href: "#services" },
+      "ByteSpline Tech helps startups, businesses, and creators build professional websites, web apps, SaaS platforms, and animated digital experiences.",
+    primaryCta: { label: "Start a Project", href: "#contact" },
+    secondaryCta: { label: "View Services", href: "#services" },
     stats: [
       { value: "50+", label: "Projects Delivered" },
       { value: "30+", label: "Happy Clients" },
@@ -45,63 +45,56 @@ export const siteContent = {
     ],
   },
 
-  trustBar: {
-    label: "Built with modern technologies",
-    technologies: [
-      "React",
-      "Next.js",
-      "Node.js",
-      "TypeScript",
-      "Python",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "AWS",
-    ],
-  },
+  highlights: [
+    { icon: "Sparkles", label: "Modern UI/UX" },
+    { icon: "Code2", label: "Scalable Code" },
+    { icon: "Zap", label: "Fast Delivery" },
+    { icon: "TrendingUp", label: "Conversion-Focused" },
+  ],
 
   services: {
     sectionHeader: {
       badge: "What We Build",
-      title: "End-to-end digital solutions for modern businesses",
+      title: "End-to-end digital solutions\nfor modern businesses",
       description:
-        "From concept to launch, we handle the full development cycle with precision and care.",
+        "From concept to launch — we design, engineer, and ship products that perform.",
     },
     items: [
       {
         icon: "Globe",
         title: "Custom Websites",
         description:
-          "Modern, fast, responsive websites built for trust, conversions, and brand presence.",
+          "High-performance marketing sites and landing pages built for conversions, trust, and brand presence.",
       },
       {
-        icon: "LayoutTemplate",
+        icon: "Monitor",
         title: "Web Applications",
         description:
-          "Scalable web apps with clean architecture, intuitive UX, and robust backend logic.",
+          "Full-stack web apps with clean architecture, intuitive UX, and scalable backend logic.",
+      },
+      {
+        icon: "Rocket",
+        title: "SaaS & MVP Development",
+        description:
+          "Go from idea to launched product fast. Multi-tenant SaaS with auth, billing, and dashboards.",
       },
       {
         icon: "Layers",
-        title: "SaaS Platforms",
+        title: "3D / Animated Websites",
         description:
-          "Multi-tenant SaaS products with subscriptions, dashboards, and API integrations.",
-      },
-      {
-        icon: "Smartphone",
-        title: "Mobile Apps",
-        description:
-          "Cross-platform mobile apps built with React Native for iOS and Android.",
+          "Spline, Three.js, and Framer Motion-powered experiences that make your brand unforgettable.",
       },
       {
         icon: "BrainCircuit",
         title: "AI Integrations",
         description:
-          "Embed LLMs, chatbots, and automation into your products using modern AI APIs.",
+          "Embed LLMs, chatbots, and intelligent automation into your product with modern AI APIs.",
       },
       {
-        icon: "Zap",
-        title: "Animated Experiences",
+        icon: "Palette",
+        title: "UI/UX Design",
         description:
-          "Scroll-triggered animations, micro-interactions, and motion design that delight users.",
+          "Pixel-perfect design systems and prototypes that balance aesthetics with conversion strategy.",
       },
     ],
   },
@@ -109,31 +102,34 @@ export const siteContent = {
   portfolio: {
     sectionHeader: {
       badge: "Our Work",
-      title: "Projects that drive real results",
+      title: "Projects built to\nstand out",
       description:
-        "A selection of recent work across industries and product types.",
+        "Polished case studies across industries — each one a testament to clean code and sharp design.",
     },
     items: [
       {
-        title: "SaaS Analytics Dashboard",
-        category: "Web Application",
-        tags: ["Next.js", "TypeScript", "Tailwind"],
+        title: "Pirates Cafe Themed Website",
+        type: "3D / Animated Website",
         description:
-          "Real-time analytics platform with role-based access and interactive charts.",
+          "An immersive dining experience site with Spline 3D scenes, scroll-triggered animations, and a reservation flow that drove a 40% increase in online bookings.",
+        tags: ["Next.js", "Flow AI", "Framer Motion", "Tailwind"],
+        gradient: "from-cyan-500/10 to-blue-600/10",
       },
       {
-        title: "E-Commerce Platform",
-        category: "Custom Website",
-        tags: ["Next.js", "Stripe", "PostgreSQL"],
+        title: "PulseFit Gym Management App",
+        type: "Mobile App / MERN Platform",
         description:
-          "Full-stack storefront with cart, checkout, and admin panel for a fashion brand.",
+          "A mobile-first gym management platform built for managing staff, members, subscriptions, and branch-level operations from one clean dashboard and app experience.",
+        tags: ["MongoDB", "Express", "React Native", "Node.js"],
+        gradient: "from-indigo-500/10 to-violet-600/10",
       },
       {
-        title: "AI Writing Assistant",
-        category: "AI Integration",
-        tags: ["OpenAI", "React", "Node.js"],
+        title: "The AI Current",
+        type: "Content Platform / AI Publishing",
         description:
-          "Intelligent writing tool with prompt templates and export features for content teams.",
+          "A modern blog posting platform designed specifically for publishing AI-focused content, including new AI tools, product updates, tutorials, and curated tech insights.",
+        tags: ["Next.js", "TypeScript", "Tailwind", "CMS"],
+        gradient: "from-emerald-500/10 to-cyan-600/10",
       },
     ],
   },
@@ -141,34 +137,40 @@ export const siteContent = {
   process: {
     sectionHeader: {
       badge: "How We Work",
-      title: "A clear process from idea to launch",
+      title: "A clear process from\nidea to launch",
       description:
-        "No surprises. Just transparent collaboration every step of the way.",
+        "No surprises. Just transparent collaboration, clear milestones, and consistent delivery.",
     },
     steps: [
       {
         number: "01",
-        title: "Discovery & Strategy",
+        title: "Discover",
         description:
-          "We learn your business goals, target users, and technical requirements to set a solid foundation.",
+          "We learn your goals, users, and requirements through deep discovery sessions to set a solid foundation.",
       },
       {
         number: "02",
-        title: "Design & Prototype",
+        title: "Design",
         description:
-          "We create wireframes and high-fidelity designs for your review before writing a single line of code.",
+          "Wireframes, prototypes, and high-fidelity UI — designed for review and approval before any code is written.",
       },
       {
         number: "03",
-        title: "Build & Develop",
+        title: "Develop",
         description:
-          "Our engineers build your product using modern tech stacks with clean, maintainable code.",
+          "Clean, scalable code built with modern stacks. Regular builds shared throughout the sprint.",
       },
       {
         number: "04",
-        title: "Test & Launch",
+        title: "Refine",
         description:
-          "Thorough QA testing across devices, then a smooth deployment with zero-downtime delivery.",
+          "Iterative testing, feedback rounds, and polish until the product feels exactly right.",
+      },
+      {
+        number: "05",
+        title: "Launch",
+        description:
+          "Zero-downtime deployment, handoff documentation, and post-launch support to keep things running.",
       },
     ],
   },
@@ -176,16 +178,16 @@ export const siteContent = {
   about: {
     sectionHeader: {
       badge: "About Us",
-      title: "A small team with big ambitions",
+      title: "A modern studio built\nfor ambitious products",
     },
     paragraphs: [
-      "ByteSpline Tech is a boutique digital product studio focused on building exceptional web and mobile experiences. We combine sharp design with solid engineering to deliver products that clients are proud of.",
-      "We work closely with founders, startups, and growing businesses who want a development partner that cares about quality — not just hitting deadlines.",
+      "ByteSpline Tech is a software studio focused on clean design, strong engineering, and smooth digital experiences. We help businesses go from idea to launched product — whether that's a polished website, a web app, a SaaS platform, or an animated digital experience.",
+      "Our team blends technical depth with creative thinking to deliver products that perform well, look great, and grow with your business. We work with startups, founders, and growing companies who care about quality — not just speed.",
     ],
     stats: [
       { value: "50+", label: "Projects Delivered" },
       { value: "30+", label: "Happy Clients" },
-      { value: "3+", label: "Years of Experience" },
+      { value: "3+", label: "Years Experience" },
       { value: "100%", label: "Client Satisfaction" },
     ],
   },
@@ -193,101 +195,105 @@ export const siteContent = {
   whyChooseUs: {
     sectionHeader: {
       badge: "Why ByteSpline",
-      title: "What makes us different",
+      title: "What sets us apart",
       description:
-        "We're not just a vendor. We're a partner invested in your product's success.",
+        "We're not a template shop. Every project is built from scratch with the craft it deserves.",
     },
     items: [
       {
         icon: "Code2",
-        title: "Clean Code",
+        title: "Custom-Built Solutions",
         description:
-          "We write maintainable, well-documented code you can confidently build on.",
+          "No page builders or templates. Every component is engineered specifically for your product.",
       },
       {
-        icon: "Clock",
-        title: "On-Time Delivery",
+        icon: "Layers",
+        title: "Clean, Scalable Code",
         description:
-          "We respect your timelines and communicate proactively when scope shifts.",
+          "Maintainable architecture built to grow — readable, well-structured, and handoff-ready.",
+      },
+      {
+        icon: "Palette",
+        title: "Design-Focused Development",
+        description:
+          "Pixel-perfect implementation with a genuine eye for aesthetics and conversion design.",
+      },
+      {
+        icon: "Zap",
+        title: "Performance & Mobile First",
+        description:
+          "Optimized for Core Web Vitals, fast load times, and flawless experience on all devices.",
       },
       {
         icon: "MessageCircle",
         title: "Transparent Communication",
         description:
-          "Regular updates, open channels, and no technical jargon to hide behind.",
-      },
-      {
-        icon: "Shield",
-        title: "Secure & Reliable",
-        description:
-          "Security-first mindset with proper auth, data handling, and infrastructure.",
-      },
-      {
-        icon: "TrendingUp",
-        title: "Scalable Architecture",
-        description:
-          "Systems designed to grow with your business, not break under pressure.",
+          "Regular updates, open channels, and no jargon. You always know where the project stands.",
       },
       {
         icon: "Users",
-        title: "Post-Launch Support",
+        title: "End-to-End Delivery",
         description:
-          "We stay around after launch to fix bugs, add features, and keep things running.",
+          "From wireframe to deployment — one team, one thread of accountability, zero handoff chaos.",
       },
     ],
   },
 
   cta: {
     badge: "Ready to Build?",
-    title: "Let's turn your idea into a product",
+    title: "Have an idea? Let's turn it into\na polished digital product.",
     description:
-      "Whether you're starting from scratch or need to level up an existing product — let's talk.",
-    primaryButton: { label: "Start a Project", href: "#contact" },
-    secondaryButton: { label: "View Portfolio", href: "#portfolio" },
+      "Whether you need a website, app, MVP, or animated experience — ByteSpline Tech can help you design and build it.",
+    primaryCta: { label: "Book a Free Consultation", href: "#contact" },
+    secondaryCta: { label: "View Our Work", href: "#work" },
   },
 
   contact: {
     sectionHeader: {
       badge: "Get in Touch",
-      title: "Let's work together",
+      title: "Let's build something\ngreat together",
       description:
-        "Tell us about your project and we'll get back to you within 24 hours.",
+        "Tell us about your project. We'll get back to you within 24 hours.",
     },
     email: "hello@bytespline.com",
-    whatsapp: "+92 300 0000000",
     location: "Remote-first · Pakistan",
-    formLabels: {
-      name: "Your Name",
-      email: "Email Address",
-      subject: "Project Type",
-      message: "Tell us about your project",
-      submit: "Send Message",
-    },
+    projectTypes: [
+      "Custom Website",
+      "Web Application",
+      "SaaS / MVP",
+      "3D / Animated Website",
+      "AI Integration",
+      "UI/UX Design",
+      "Other",
+    ],
+    budgetRanges: [
+      "Under $1,000",
+      "$1,000 – $5,000",
+      "$5,000 – $15,000",
+      "$15,000 – $50,000",
+      "$50,000+",
+      "Not sure yet",
+    ],
   },
 
   footer: {
-    logo: "ByteSpline",
-    tagline: "Building digital products that perform.",
-    links: {
-      company: {
-        heading: "Company",
-        items: [
-          { label: "About", href: "#about" },
-          { label: "Services", href: "#services" },
-          { label: "Portfolio", href: "#portfolio" },
-          { label: "Contact", href: "#contact" },
-        ],
-      },
-      services: {
-        heading: "Services",
-        items: [
-          { label: "Custom Websites", href: "#services" },
-          { label: "Web Applications", href: "#services" },
-          { label: "SaaS Platforms", href: "#services" },
-          { label: "AI Integrations", href: "#services" },
-        ],
-      },
-    },
+    tagline: "Building digital products that look sharp and perform.",
+    quickLinks: [
+      { label: "Home", href: "#home" },
+      { label: "Services", href: "#services" },
+      { label: "Work", href: "#work" },
+      { label: "Process", href: "#process" },
+      { label: "About", href: "#about" },
+      { label: "Contact", href: "#contact" },
+    ],
+    serviceLinks: [
+      { label: "Custom Websites", href: "#services" },
+      { label: "Web Applications", href: "#services" },
+      { label: "SaaS & MVP", href: "#services" },
+      { label: "3D / Animated Sites", href: "#services" },
+      { label: "AI Integrations", href: "#services" },
+      { label: "UI/UX Design", href: "#services" },
+    ],
     social: [
       { label: "GitHub", href: "https://github.com/bytespline" },
       { label: "LinkedIn", href: "https://linkedin.com/company/bytespline" },

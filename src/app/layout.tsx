@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Urbanist } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { siteContent } from "@/content/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -31,23 +34,15 @@ export const metadata: Metadata = {
     title: siteContent.meta.title,
     description: siteContent.meta.description,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    >
-      <body>{children}</body>
+    <html lang="en" className={`${urbanist.variable} ${geistMono.variable}`}>
+      <body className="antialiased font-sans">{children}</body>
     </html>
   );
 }
