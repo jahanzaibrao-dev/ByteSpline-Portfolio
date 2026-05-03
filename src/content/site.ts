@@ -39,9 +39,9 @@ export const siteContent = {
     primaryCta: { label: "Start a Project", href: "#contact" },
     secondaryCta: { label: "View Services", href: "#services" },
     stats: [
-      { value: "50+", label: "Projects Delivered" },
-      { value: "30+", label: "Happy Clients" },
-      { value: "3+", label: "Years Experience" },
+      { value: "20+", label: "Projects Built" },
+      { value: "5+", label: "Years Experience" },
+      { value: "100%", label: "Client Satisfaction" },
     ],
   },
 
@@ -111,7 +111,7 @@ export const siteContent = {
         title: "Pirates Cafe Themed Website",
         type: "3D / Animated Website",
         description:
-          "An immersive dining experience site with Spline 3D scenes, scroll-triggered animations, and a reservation flow that drove a 40% increase in online bookings.",
+          "A concept-driven immersive dining website with Spline-style 3D visuals, scroll-triggered animations, and a polished reservation flow designed to increase online bookings.",
         tags: ["Next.js", "Flow AI", "Framer Motion", "Tailwind"],
         gradient: "from-cyan-500/10 to-blue-600/10",
         image: "/pirates-cafe.png",
@@ -188,9 +188,9 @@ export const siteContent = {
       "Our team blends technical depth with creative thinking to deliver products that perform well, look great, and grow with your business. We work with startups, founders, and growing companies who care about quality — not just speed.",
     ],
     stats: [
-      { value: "20+", label: "Projects Delivered" },
-      { value: "15+", label: "Happy Clients" },
+      { value: "20+", label: "Projects Built" },
       { value: "5+", label: "Years Experience" },
+      { value: "100%", label: "Custom Development" },
       { value: "100%", label: "Client Satisfaction" },
     ],
   },

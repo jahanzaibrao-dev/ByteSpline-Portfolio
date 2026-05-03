@@ -60,7 +60,11 @@ export default function Portfolio() {
                       />
                       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
                         <div className="w-9 h-9 rounded-full bg-border/60 border border-border flex items-center justify-center">
-                          <Lock size={16} className="text-muted-light/70" aria-hidden="true" />
+                          <Lock
+                            size={16}
+                            className="text-muted-light/70"
+                            aria-hidden="true"
+                          />
                         </div>
                         <span className="text-[11px] font-semibold uppercase tracking-widest text-muted-light/60">
                           Protected by Client NDA
@@ -109,15 +113,6 @@ export default function Portfolio() {
                   <p className="text-muted-light text-sm leading-relaxed flex-1">
                     {project.description}
                   </p>
-
-                  <button
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-muted hover:text-primary transition-colors duration-200 cursor-default"
-                    aria-label={`View case study for ${project.title} (coming soon)`}
-                    disabled
-                  >
-                    View Case Study
-                    <ArrowUpRight size={14} aria-hidden="true" />
-                  </button>
                 </div>
               </motion.article>
             </StaggerItem>
