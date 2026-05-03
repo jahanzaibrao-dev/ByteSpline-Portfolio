@@ -29,7 +29,7 @@ export async function submitContact(
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "ByteSpline Tech <noreply@bytespline.com>",
+      from: "ByteSpline Technologies <noreply@bytespline.com>",
       // ⚠️  Resend restriction: until bytespline.com is verified in the Resend
       // dashboard, you can only send to the email you signed up with.
       // Replace this with your Resend account email for testing, or verify
@@ -41,7 +41,7 @@ export async function submitContact(
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#1e293b">
           <div style="background:#050d1a;padding:24px 32px;border-radius:12px 12px 0 0">
             <h1 style="margin:0;font-size:22px;color:#22d3ee;font-weight:700">
-              ByteSpline Tech
+              ByteSpline Technologies
             </h1>
             <p style="margin:6px 0 0;font-size:13px;color:#94a3b8">New contact form submission</p>
           </div>

@@ -26,7 +26,7 @@ npx tsc --noEmit # TypeScript check without building
 
 ## Architecture
 
-Single-page portfolio site for ByteSpline Tech. The root page ([src/app/page.tsx](src/app/page.tsx)) composes all section components in order. Components are Server Components by default; `'use client'` is added only where browser APIs, event handlers, or Framer Motion are needed.
+Single-page portfolio site for ByteSpline Technologies. The root page ([src/app/page.tsx](src/app/page.tsx)) composes all section components in order. Components are Server Components by default; `'use client'` is added only where browser APIs, event handlers, or Framer Motion are needed.
 
 ### Content
 
@@ -34,20 +34,20 @@ All text, labels, and data live in **[src/content/site.ts](src/content/site.ts)*
 
 ### Key Components
 
-| File | Notes |
-|------|-------|
-| [src/components/ui/Button.tsx](src/components/ui/Button.tsx) | Renders `<Link>` when `href` is set, `<button>` otherwise. Variants: `primary`, `outline`, `ghost` |
-| [src/components/ui/FadeUp.tsx](src/components/ui/FadeUp.tsx) | `FadeUp`, `StaggerContainer`, `StaggerItem` — Framer Motion scroll-reveal wrappers (`'use client'`) |
-| [src/components/SectionHeader.tsx](src/components/SectionHeader.tsx) | Badge + h2 + description; uses `FadeUp` internally |
-| [src/components/HeroVisual.tsx](src/components/HeroVisual.tsx) | Abstract CSS/SVG/Framer Motion 3D placeholder. See inline comments to swap in Spline or R3F |
-| [src/components/Navbar.tsx](src/components/Navbar.tsx) | Fixed header, scroll-aware blur, animated mobile menu (`AnimatePresence`) |
-| [src/components/Services.tsx](src/components/Services.tsx) | Icon map keyed on string names from `site.ts`; add icons to `iconMap` if extending |
-| [src/components/WhyChooseUs.tsx](src/components/WhyChooseUs.tsx) | Same icon-map pattern as Services |
-| [src/components/Footer.tsx](src/components/Footer.tsx) | Social icons are inline SVG components (GitHub, LinkedIn, Twitter) |
+| File                                                                 | Notes                                                                                               |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [src/components/ui/Button.tsx](src/components/ui/Button.tsx)         | Renders `<Link>` when `href` is set, `<button>` otherwise. Variants: `primary`, `outline`, `ghost`  |
+| [src/components/ui/FadeUp.tsx](src/components/ui/FadeUp.tsx)         | `FadeUp`, `StaggerContainer`, `StaggerItem` — Framer Motion scroll-reveal wrappers (`'use client'`) |
+| [src/components/SectionHeader.tsx](src/components/SectionHeader.tsx) | Badge + h2 + description; uses `FadeUp` internally                                                  |
+| [src/components/HeroVisual.tsx](src/components/HeroVisual.tsx)       | Abstract CSS/SVG/Framer Motion 3D placeholder. See inline comments to swap in Spline or R3F         |
+| [src/components/Navbar.tsx](src/components/Navbar.tsx)               | Fixed header, scroll-aware blur, animated mobile menu (`AnimatePresence`)                           |
+| [src/components/Services.tsx](src/components/Services.tsx)           | Icon map keyed on string names from `site.ts`; add icons to `iconMap` if extending                  |
+| [src/components/WhyChooseUs.tsx](src/components/WhyChooseUs.tsx)     | Same icon-map pattern as Services                                                                   |
+| [src/components/Footer.tsx](src/components/Footer.tsx)               | Social icons are inline SVG components (GitHub, LinkedIn, Twitter)                                  |
 
 ### Logo
 
-No logo file yet. Navbar and Footer show a text fallback (`ByteSpline Tech`).  
+No logo file yet. Navbar and Footer show a text fallback (`ByteSpline Technologies`).  
 To activate the image logo: place `logo.png` in `/public/` and uncomment the `<Image>` tags in both Navbar and Footer.
 
 ### 3D Hero Placeholder
@@ -58,20 +58,20 @@ To activate the image logo: place `logo.png` in `/public/` and uncomment the `<I
 
 Defined in `@theme` block in [globals.css](src/app/globals.css):
 
-| Token | Class prefix | Value |
-|-------|-------------|-------|
-| `--color-background` | `bg-background` | `#050d1a` |
-| `--color-surface` | `bg-surface` | `#081525` |
-| `--color-card` | `bg-card` | `#0b1a2e` |
-| `--color-card-hover` | `bg-card-hover` | `#0f2038` |
-| `--color-border` | `border-border` | `#162c48` |
-| `--color-primary` | `text-primary` / `bg-primary` | `#22d3ee` (cyan) |
-| `--color-primary-hover` | `bg-primary-hover` | `#06b6d4` |
-| `--color-accent` | `text-accent` | `#818cf8` (indigo) |
-| `--color-muted` | `text-muted` | `#64748b` |
-| `--color-muted-light` | `text-muted-light` | `#94a3b8` |
-| `--color-foreground` | `text-foreground` | `#f1f5f9` |
-| `--color-foreground-dim` | `text-foreground-dim` | `#cbd5e1` |
+| Token                    | Class prefix                  | Value              |
+| ------------------------ | ----------------------------- | ------------------ |
+| `--color-background`     | `bg-background`               | `#050d1a`          |
+| `--color-surface`        | `bg-surface`                  | `#081525`          |
+| `--color-card`           | `bg-card`                     | `#0b1a2e`          |
+| `--color-card-hover`     | `bg-card-hover`               | `#0f2038`          |
+| `--color-border`         | `border-border`               | `#162c48`          |
+| `--color-primary`        | `text-primary` / `bg-primary` | `#22d3ee` (cyan)   |
+| `--color-primary-hover`  | `bg-primary-hover`            | `#06b6d4`          |
+| `--color-accent`         | `text-accent`                 | `#818cf8` (indigo) |
+| `--color-muted`          | `text-muted`                  | `#64748b`          |
+| `--color-muted-light`    | `text-muted-light`            | `#94a3b8`          |
+| `--color-foreground`     | `text-foreground`             | `#f1f5f9`          |
+| `--color-foreground-dim` | `text-foreground-dim`         | `#cbd5e1`          |
 
 ### Framer Motion patterns
 

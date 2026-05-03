@@ -1,8 +1,8 @@
 export const siteContent = {
   meta: {
-    title: "ByteSpline Tech — Modern Web, Apps & AI Solutions",
+    title: "ByteSpline Technologies — Modern Web, Apps & AI Solutions",
     description:
-      "ByteSpline Tech is a modern software studio building polished websites, web apps, SaaS platforms, and animated digital experiences for startups and businesses worldwide.",
+      "ByteSpline Technologies is a modern software studio building polished websites, web apps, SaaS platforms, and animated digital experiences for startups and businesses worldwide.",
     url: "https://bytespline.com",
     keywords: [
       "web development",
@@ -17,7 +17,7 @@ export const siteContent = {
   },
 
   nav: {
-    logo: "ByteSpline Tech",
+    logo: "ByteSpline Technologies",
     links: [
       { label: "Home", href: "#home" },
       { label: "Services", href: "#services" },
@@ -35,7 +35,7 @@ export const siteContent = {
     titleHighlight: "look sharp, move smoothly,",
     titleLine2: "and perform fast.",
     description:
-      "ByteSpline Tech helps startups, businesses, and creators build professional websites, web apps, SaaS platforms, and animated digital experiences.",
+      "ByteSpline Technologies helps startups, businesses, and creators build professional websites, web apps, SaaS platforms, and animated digital experiences.",
     primaryCta: { label: "Start a Project", href: "#contact" },
     secondaryCta: { label: "View Services", href: "#services" },
     stats: [
@@ -114,6 +114,7 @@ export const siteContent = {
           "An immersive dining experience site with Spline 3D scenes, scroll-triggered animations, and a reservation flow that drove a 40% increase in online bookings.",
         tags: ["Next.js", "Flow AI", "Framer Motion", "Tailwind"],
         gradient: "from-cyan-500/10 to-blue-600/10",
+        image: "/pirates-cafe.png",
       },
       {
         title: "PulseFit Gym Management App",
@@ -122,6 +123,7 @@ export const siteContent = {
           "A mobile-first gym management platform built for managing staff, members, subscriptions, and branch-level operations from one clean dashboard and app experience.",
         tags: ["MongoDB", "Express", "React Native", "Node.js"],
         gradient: "from-indigo-500/10 to-violet-600/10",
+        image: null, // protected by client NDA
       },
       {
         title: "The AI Current",
@@ -130,6 +132,7 @@ export const siteContent = {
           "A modern blog posting platform designed specifically for publishing AI-focused content, including new AI tools, product updates, tutorials, and curated tech insights.",
         tags: ["Next.js", "TypeScript", "Tailwind", "CMS"],
         gradient: "from-emerald-500/10 to-cyan-600/10",
+        image: "/ai-current.png",
       },
     ],
   },
@@ -181,13 +184,13 @@ export const siteContent = {
       title: "A modern studio built\nfor ambitious products",
     },
     paragraphs: [
-      "ByteSpline Tech is a software studio focused on clean design, strong engineering, and smooth digital experiences. We help businesses go from idea to launched product — whether that's a polished website, a web app, a SaaS platform, or an animated digital experience.",
+      "ByteSpline Technologies is a software studio focused on clean design, strong engineering, and smooth digital experiences. We help businesses go from idea to launched product — whether that's a polished website, a web app, a SaaS platform, or an animated digital experience.",
       "Our team blends technical depth with creative thinking to deliver products that perform well, look great, and grow with your business. We work with startups, founders, and growing companies who care about quality — not just speed.",
     ],
     stats: [
-      { value: "50+", label: "Projects Delivered" },
-      { value: "30+", label: "Happy Clients" },
-      { value: "3+", label: "Years Experience" },
+      { value: "20+", label: "Projects Delivered" },
+      { value: "15+", label: "Happy Clients" },
+      { value: "5+", label: "Years Experience" },
       { value: "100%", label: "Client Satisfaction" },
     ],
   },
@@ -243,7 +246,7 @@ export const siteContent = {
     badge: "Ready to Build?",
     title: "Have an idea? Let's turn it into\na polished digital product.",
     description:
-      "Whether you need a website, app, MVP, or animated experience — ByteSpline Tech can help you design and build it.",
+      "Whether you need a website, app, MVP, or animated experience — ByteSpline Technologies can help you design and build it.",
     primaryCta: { label: "Book a Free Consultation", href: "#contact" },
     secondaryCta: { label: "View Our Work", href: "#work" },
   },
@@ -297,8 +300,8 @@ export const siteContent = {
     social: [
       { label: "GitHub", href: "https://github.com/bytespline" },
       { label: "LinkedIn", href: "https://linkedin.com/company/bytespline" },
-      { label: "Twitter", href: "https://twitter.com/bytespline" },
+      // { label: "Twitter", href: "https://twitter.com/bytespline" },
     ],
-    copyright: `© ${new Date().getFullYear()} ByteSpline Tech. All rights reserved.`,
+    copyright: `© ${new Date().getFullYear()} ByteSpline Technologies. All rights reserved.`,
   },
 };

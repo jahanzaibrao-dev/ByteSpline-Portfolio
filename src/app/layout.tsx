@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: siteContent.meta.title,
     description: siteContent.meta.description,
     url: siteContent.meta.url,
-    siteName: "ByteSpline Tech",
+    siteName: "ByteSpline Technologies",
     type: "website",
     locale: "en_US",
   },
