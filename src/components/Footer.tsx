@@ -68,7 +68,7 @@ export default function Footer() {
               className="text-lg font-bold tracking-tight inline-block mb-3"
             >
               <span className="text-primary">ByteSpline</span>
-              <span className="text-foreground"> Technologies</span>
+              <span className="text-foreground"> Tech</span>
             </Link>
             <p className="text-sm text-muted-light leading-relaxed max-w-xs">
               {footer.tagline}

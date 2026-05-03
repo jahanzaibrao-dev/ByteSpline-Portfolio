@@ -19,7 +19,7 @@ function Logo() {
       {/* <Image src="/logo.png" alt="ByteSpline Tech" width={140} height={36} priority className="h-8 w-auto" /> */}
       <span className="text-lg font-bold tracking-tight">
         <span className="text-primary">ByteSpline</span>
-        <span className="text-foreground"> Technologies</span>
+        <span className="text-foreground"> Tech</span>
       </span>
     </Link>
   );
