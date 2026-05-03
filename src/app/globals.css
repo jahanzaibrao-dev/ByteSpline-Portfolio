@@ -61,3 +61,8 @@ body {
 .animate-spin-slow     { animation: spin-slow 24s linear infinite; }
 .animate-pulse-glow    { animation: pulse-glow 3.5s ease-in-out infinite; }
 .animate-grid          { animation: grid-move 8s linear infinite; }
+
+/* ── Hero visual orbit animations ──
+   CSS guarantees both loops stay frame-perfectly in sync — no Framer drift. */
+@keyframes orbit         { from { transform: rotate(0deg);    } to { transform: rotate(360deg);  } }
+@keyframes counter-orbit { from { transform: rotate(0deg);    } to { transform: rotate(-360deg); } }
