@@ -11,6 +11,7 @@ interface ButtonProps {
   children: ReactNode;
   className?: string;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 const base =
@@ -38,19 +39,22 @@ export default function Button({
   children,
   className = "",
   type = "button",
+  disabled = false,
 }: ButtonProps) {
-  const cls = `${base} ${variants[variant]} ${sizes[size]} ${className}`;
+  const cls = `${base} ${variants[variant]} ${sizes[size]} ${
+    disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : ""
+  } ${className}`;
 
   if (href) {
     return (
-      <Link href={href} className={cls}>
+      <Link href={href} className={cls} aria-disabled={disabled} tabIndex={disabled ? -1 : undefined}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} className={cls}>
+    <button type={type} onClick={onClick} disabled={disabled} className={cls}>
       {children}
     </button>
   );
