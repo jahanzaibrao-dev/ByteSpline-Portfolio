@@ -13,10 +13,10 @@ function Logo() {
     <Link
       href="#home"
       className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded"
-      aria-label="ByteSpline Technologies — home"
+      aria-label="ByteSpline Tech — home"
     >
       {/* Swap in next/image when /public/logo.png is available */}
-      {/* <Image src="/logo.png" alt="ByteSpline Technologies" width={140} height={36} priority className="h-8 w-auto" /> */}
+      {/* <Image src="/logo.png" alt="ByteSpline Tech" width={140} height={36} priority className="h-8 w-auto" /> */}
       <span className="text-lg font-bold tracking-tight">
         <span className="text-primary">ByteSpline</span>
         <span className="text-foreground"> Technologies</span>

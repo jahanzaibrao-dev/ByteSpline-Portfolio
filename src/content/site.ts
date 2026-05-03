@@ -1,8 +1,8 @@
 export const siteContent = {
   meta: {
-    title: "ByteSpline Technologies — Modern Web, Apps & AI Solutions",
+    title: "ByteSpline Tech — Modern Web, Apps & AI Solutions",
     description:
-      "ByteSpline Technologies is a modern software studio building polished websites, web apps, SaaS platforms, and animated digital experiences for startups and businesses worldwide.",
+      "ByteSpline Tech is a modern software studio building polished websites, web apps, SaaS platforms, and animated digital experiences for startups and businesses worldwide.",
     url: "https://bytespline.com",
     keywords: [
       "web development",
@@ -17,7 +17,7 @@ export const siteContent = {
   },
 
   nav: {
-    logo: "ByteSpline Technologies",
+    logo: "ByteSpline Tech",
     links: [
       { label: "Home", href: "#home" },
       { label: "Services", href: "#services" },
@@ -35,7 +35,7 @@ export const siteContent = {
     titleHighlight: "look sharp, move smoothly,",
     titleLine2: "and perform fast.",
     description:
-      "ByteSpline Technologies helps startups, businesses, and creators build professional websites, web apps, SaaS platforms, and animated digital experiences.",
+      "ByteSpline Tech helps startups, businesses, and creators build professional websites, web apps, SaaS platforms, and animated digital experiences.",
     primaryCta: { label: "Start a Project", href: "#contact" },
     secondaryCta: { label: "View Services", href: "#services" },
     stats: [
@@ -184,7 +184,7 @@ export const siteContent = {
       title: "A modern studio built\nfor ambitious products",
     },
     paragraphs: [
-      "ByteSpline Technologies is a software studio focused on clean design, strong engineering, and smooth digital experiences. We help businesses go from idea to launched product — whether that's a polished website, a web app, a SaaS platform, or an animated digital experience.",
+      "ByteSpline Tech is a software studio focused on clean design, strong engineering, and smooth digital experiences. We help businesses go from idea to launched product — whether that's a polished website, a web app, a SaaS platform, or an animated digital experience.",
       "Our team blends technical depth with creative thinking to deliver products that perform well, look great, and grow with your business. We work with startups, founders, and growing companies who care about quality — not just speed.",
     ],
     stats: [
@@ -246,7 +246,7 @@ export const siteContent = {
     badge: "Ready to Build?",
     title: "Have an idea? Let's turn it into\na polished digital product.",
     description:
-      "Whether you need a website, app, MVP, or animated experience — ByteSpline Technologies can help you design and build it.",
+      "Whether you need a website, app, MVP, or animated experience — ByteSpline Tech can help you design and build it.",
     primaryCta: { label: "Book a Free Consultation", href: "#contact" },
     secondaryCta: { label: "View Our Work", href: "#work" },
   },
@@ -302,6 +302,6 @@ export const siteContent = {
       { label: "LinkedIn", href: "https://linkedin.com/company/bytespline" },
       // { label: "Twitter", href: "https://twitter.com/bytespline" },
     ],
-    copyright: `© ${new Date().getFullYear()} ByteSpline Technologies. All rights reserved.`,
+    copyright: `© ${new Date().getFullYear()} ByteSpline Tech. All rights reserved.`,
   },
 };

@@ -62,7 +62,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             {/* Logo — swap in next/image when /public/logo.png is ready */}
-            {/* <Image src="/logo.png" alt="ByteSpline Technologies" width={140} height={36} className="h-8 w-auto mb-3" /> */}
+            {/* <Image src="/logo.png" alt="ByteSpline Tech" width={140} height={36} className="h-8 w-auto mb-3" /> */}
             <Link
               href="#home"
               className="text-lg font-bold tracking-tight inline-block mb-3"

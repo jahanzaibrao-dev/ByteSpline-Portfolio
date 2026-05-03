@@ -26,7 +26,7 @@ npx tsc --noEmit # TypeScript check without building
 
 ## Architecture
 
-Single-page portfolio site for ByteSpline Technologies. The root page ([src/app/page.tsx](src/app/page.tsx)) composes all section components in order. Components are Server Components by default; `'use client'` is added only where browser APIs, event handlers, or Framer Motion are needed.
+Single-page portfolio site for ByteSpline Tech. The root page ([src/app/page.tsx](src/app/page.tsx)) composes all section components in order. Components are Server Components by default; `'use client'` is added only where browser APIs, event handlers, or Framer Motion are needed.
 
 ### Content
 
@@ -47,7 +47,7 @@ All text, labels, and data live in **[src/content/site.ts](src/content/site.ts)*
 
 ### Logo
 
-No logo file yet. Navbar and Footer show a text fallback (`ByteSpline Technologies`).  
+No logo file yet. Navbar and Footer show a text fallback (`ByteSpline Tech`).  
 To activate the image logo: place `logo.png` in `/public/` and uncomment the `<Image>` tags in both Navbar and Footer.
 
 ### 3D Hero Placeholder

@@ -25,9 +25,17 @@ export const metadata: Metadata = {
     title: siteContent.meta.title,
     description: siteContent.meta.description,
     url: siteContent.meta.url,
-    siteName: "ByteSpline Technologies",
+    siteName: "ByteSpline Tech",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ByteSpline Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
