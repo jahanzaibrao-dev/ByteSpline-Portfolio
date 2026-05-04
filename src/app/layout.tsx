@@ -16,6 +16,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteContent.meta.url}/#organization`,
+      name: "ByteSpline Tech",
+      url: siteContent.meta.url,
+      email: siteContent.contact.email,
+      description:
+        "ByteSpline Tech builds modern websites, web apps, SaaS MVPs, AI integrations, and animated digital experiences.",
+      sameAs: [],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteContent.meta.url}/#website`,
+      name: "ByteSpline Tech",
+      url: siteContent.meta.url,
+      publisher: {
+        "@id": `${siteContent.meta.url}/#organization`,
+      },
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: siteContent.meta.title,
   description: siteContent.meta.description,
@@ -50,6 +75,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${urbanist.variable} ${geistMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      </head>
       <body className="antialiased font-sans">{children}</body>
     </html>
   );
